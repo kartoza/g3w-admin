@@ -125,6 +125,11 @@ class ClientView(TemplateView):
         baseurl = "{}/{}".format(getattr(settings, 'SITE_DOMAIN', ''), getattr(settings, 'SITE_PREFIX_URL') or '')
         baseurl = self.request.build_absolute_uri(baseurl) if baseurl.startswith('/') else baseurl
 
+        if settings.DEBUG:
+            baseurl = baseurl.replace('https://', 'http://')
+        else:
+            baseurl = baseurl.replace('http://', 'https://')
+
         # add baseUrl property
         contextData['group_config'] = 'var initConfig = ' + JSONRenderer().render({
             "i18n": settings.LANGUAGES,
