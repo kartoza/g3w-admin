@@ -110,6 +110,10 @@ class GroupConfigApiView(APIView):
 
         baseurl = "/{}".format(getattr(settings, 'SITE_PREFIX_URL') or '');
         baseurl = self.request.build_absolute_uri(baseurl) if baseurl.startswith('/') else baseurl
+        if settings.DEBUG:
+            baseurl = baseurl.replace('https://', 'http://')
+        else:
+            baseurl = baseurl.replace('http://', 'https://')
 
         generaldata = GeneralSuiteData.objects.get()
 
