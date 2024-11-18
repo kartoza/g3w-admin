@@ -48,7 +48,7 @@ if [ ! -e ${SETUP_DONE_FILE} ]; then
       echo "wait 30s until is ready"
       sleep 30;
     done
-    
+
     pushd .
     cd ${DJANGO_DIRECTORY}/core/static
     rm -rf bower_components
@@ -63,6 +63,7 @@ if [ ! -e ${SETUP_DONE_FILE} ]; then
       rm -rf ${STATIC_ROOT}
       python3 manage.py collectstatic --noinput -v 0
     fi
+    echo "Migrating default DB"
     python3 manage.py migrate --noinput
 
     echo "Installing fixtures ..."
@@ -105,9 +106,12 @@ else
     if [[ -z ${G3WSUITE_DEBUG} || ${G3WSUITE_DEBUG} != "True" ]]; then
       python3 manage.py collectstatic --noinput -v 0
     fi
+    echo "Migrating default DB"
     python3 manage.py migrate --noinput
     python3 manage.py sitetree_resync_apps
 fi
 
 # Make sure data are readable:
 chmod -R 777 ${DATASOURCE_PATH}
+
+echo "end setup_suite"
