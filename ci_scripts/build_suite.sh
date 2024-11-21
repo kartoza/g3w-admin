@@ -18,7 +18,7 @@ SECRET_KEY_FILE='/shared-volume/.secret_key'
 
 cd "${CODE_DIRECTORY}"
 
-
+rm ${BUILD_DONE_FILE}
 if [ ! -e ${BUILD_DONE_FILE} ]; then
     echo "Build started for G3W-Suite installation ..."
 
