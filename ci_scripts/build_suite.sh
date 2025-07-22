@@ -19,15 +19,13 @@ SECRET_KEY_FILE='/shared-volume/.secret_key'
 cd "${CODE_DIRECTORY}"
 
 
-if [ ! -e ${BUILD_DONE_FILE} ]; then
-    echo "Build started for G3W-Suite installation ..."
+rm -f "${BUILD_DONE_FILE}"
 
-    echo "Install javascript dependencies ..."
-    yarn --ignore-engines --ignore-scripts --prod
-    nodejs -e "try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'g3w-admin/core/static/bower_components', 'junction') } catch (e) { console.log(e); }"
+echo "Build started for G3W-Suite installation ..."
 
-    touch ${BUILD_DONE_FILE}
-else
-    echo "Build already done, skipping ..."
-fi
+echo "Install javascript dependencies ..."
+yarn --ignore-engines --ignore-scripts --prod
+nodejs -e "try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'g3w-admin/core/static/bower_components', 'junction') } catch (e) { console.log(e); }"
+
+touch ${BUILD_DONE_FILE}
 
