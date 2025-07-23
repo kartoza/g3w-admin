@@ -849,7 +849,7 @@ msgstr "Amministrazione"
 
 #: templates/include/sidebar_right.html:40
 #, fuzzy
-#| msgid "Login to go backend administration system"
+#| msgid "Login to go to backend administration system"
 msgid "Go to staff administration section"
 msgstr "Accesso al sistema di amministrazione"
 
@@ -1111,7 +1111,7 @@ msgstr ""
 #~ msgid "Access to backend administration stystem or logout"
 #~ msgstr "Accedi al backed di amministrazione o esci"
 
-#~ msgid "Login to go backend administration system"
+#~ msgid "Login to go to backend administration system"
 #~ msgstr "Accesso al sistema di amministrazione"
 
 #, fuzzy

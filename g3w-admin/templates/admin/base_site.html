@@ -4,7 +4,7 @@
 {% block branding %}
 <a href="#" class="logo">
     {% if SETTINGS.G3WSUITE_CUSTOM_STATIC_URL %}
-        <span class="logo-lg"><img src="{{ SETTINGS.G3WSUITE_MAIN_LOGO }}"></span>
+        <span class="logo-lg"><img src="{% static SETTINGS.G3WSUITE_MAIN_LOGO %}"></span>
     {% else %}
         <span class="logo-lg"><img src="{% static SETTINGS.G3WSUITE_MAIN_LOGO %}"></span>
     {% endif %}
