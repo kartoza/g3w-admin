@@ -90,7 +90,8 @@ def init_qgis():
     global QGS_APPLICATION, QGS_SERVER_SETTINGS, QGS_SERVER
 
     # Create a reference to the QgsApplication
-    QGS_APPLICATION = QgsApplication([], False) # False = disable GUI 
+    QGS_APPLICATION = QgsApplication([], False) # False = disable GUI
+    os.environ["QGIS_AUTH_DB_DIR_PATH"] = "/shared-volume/qgis-auth"
 
     # Load providers
     QGS_APPLICATION.initQgis()
