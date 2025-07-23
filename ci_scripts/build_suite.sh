@@ -25,6 +25,8 @@ echo "Build started for G3W-Suite installation ..."
 
 echo "Install javascript dependencies ..."
 yarn --ignore-engines --ignore-scripts --prod
+# Force remove existing bower_components (whether symlink or dir)
+rm -rf g3w-admin/core/static/bower_components
 nodejs -e "try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'g3w-admin/core/static/bower_components', 'junction') } catch (e) { console.log(e); }"
 
 touch ${BUILD_DONE_FILE}
