@@ -8,8 +8,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         if User.objects.count() == 1:
-            username = os.environ.get('G3WSUITE_ADMIN_USERNAME', 'admin01')
-            password = os.environ.get('G3WSUITE_ADMIN_PASSWORD', 'admin01')
+            username = os.environ.get('G3WSUITE_ADMIN_USERNAME', 'admin')
+            password = os.environ.get('G3WSUITE_ADMIN_PASSWORD', 'admin')
             email = os.environ.get('G3WSUITE_ADMIN_EMAIL', 'admin@email.com')
             print('Creating account for %s (%s)' % (username, email))
             admin = User.objects.create_superuser(email=email, username=username, password=password)
