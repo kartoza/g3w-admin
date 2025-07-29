@@ -15,7 +15,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     {% if SETTINGS.G3WSUITE_CUSTOM_STATIC_URL and SETTINGS.G3WSUITE_FAVICON %}
-    <link rel="icon" href="{{ SETTINGS.G3WSUITE_FAVICON }}">
+    <link rel="icon" href="{% static SETTINGS.G3WSUITE_FAVICON %}">
     {% else %}
     <link rel="icon" href="{% static '/img/favicon.ico' %}">
     {% endif %}
@@ -92,7 +92,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     {% if SETTINGS.G3WSUITE_CUSTOM_STATIC_URL %}
     {% for css in SETTINGS.G3WSUITE_CUSTOM_CSS %}
-    <link rel="stylesheet" type="text/css" href="{{ css }}" />
+    <link rel="stylesheet" type="text/css" href="{% static css %}" />
     {% endfor %}
     {% endif %}
 

@@ -1,0 +1,10 @@
+/*Add your custom CSS here!*/
+
+.home-block {
+    background: #fff url('https://asset.kompas.com/crops/qs7lqo0UsFE7TXqwfxF7RAaYYA0=/1x0:1024x682/1200x800/data/photo/2020/05/11/5eb950a1c8fb3.jpeg') no-repeat top right;
+    background-size: cover;
+}
+
+.home-block h1 {
+    color: #0a001f;
+}
