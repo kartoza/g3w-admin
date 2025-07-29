@@ -87,12 +87,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     {% endif %}
     <link rel="stylesheet" type="text/css" href="{% static 'bower_components/cookieconsent/build/cookieconsent.min.css' %}" />
     {% for css in css_modules %}
-    <link rel="stylesheet" type="text/css" href="{% static css %}" />
+    <link rel="stylesheet" type="text/css" href="{{ css }}" />
     {% endfor %}
 
     {% if SETTINGS.G3WSUITE_CUSTOM_STATIC_URL %}
     {% for css in SETTINGS.G3WSUITE_CUSTOM_CSS %}
-    <link rel="stylesheet" type="text/css" href="{% static css %}" />
+    <link rel="stylesheet" type="text/css" href="{{ css }}" />
     {% endfor %}
     {% endif %}
 
