@@ -1,10 +1,43 @@
 /*Add your custom CSS here!*/
 
-.home-block {
-    background: #fff url('https://asset.kompas.com/crops/qs7lqo0UsFE7TXqwfxF7RAaYYA0=/1x0:1024x682/1200x800/data/photo/2020/05/11/5eb950a1c8fb3.jpeg') no-repeat top right;
-    background-size: cover;
+/*
+change the value of the defined properties here
+*/
+:root {
+  --navbar-bg-color: #f39c12;
+  --navbar-link-color: #ffffff;
+  --navbar-link-active-bg-color: rgba(0, 0, 0, 0.1);
+  --navbar-link-active-color: #f6f6f6;
+  --sidebar-toggle-color: #ffffff;
+  --sidebar-toggle-hover-color: #f6f6f6;
+  --sidebar-toggle-hover-bg-color: #e08e0b;
+  --navbar-dropdown-list-divider-bg-color: rgba(255, 255, 255, 0.1);
+  --navbar-dropdown-list-link-color: #fff;
+  --navbar-dropdown-list-link-hover-bg: #e08e0b;
+  --main-header-logo-bg-color: #e08e0b;
+  --main-header-logo-color: #ffffff;
+  --main-header-logo-hover-bg-color: #db8b0b;
+  --user-header-bg-color: #f39c12;
+  --content-header-bg: transparent;
+  --wrapper-main-sidebar-left-side-bg-color: #222d32;
+  --user-panel-info: #fff;
+  --sidebar-menu-li-header-color: #4b646f;
+  --sidebar-menu-li-header-bg: #1a2226;
+  --sidebar-menu-list-link-color: #ffffff;
+  --sidebar-menu-list-link-bg: #1e282c;
+  --sidebar-menu-list-link-border-left-color: #f39c12;
+  --treeview-menu-bg: #2c3b41;
+  --sidebar-link-color: #b8c7ce;
+  --sidebar-link-hover-text-decor: none;
+  --treeview-menu-list-active-link: #ffffff;
+  --sidebar-form-border: 1px solid #374850;
+  --sidebar-form-btn-bg-color: #374850;
+  --sidebar-form-btn-border: 1px solid transparent;
+  --sidebar-form-input-text-color: #666;
+  --sidebar-form-input-text-focus-bg-color: #fff;
+  --sidebar-form-input-text-focus-color: #666;
+  --sidebar-form-input-text-focus-btn: #fff;
+  --sidebar-form-btn: #999;
 }
 
-.home-block h1 {
-    color: #0a001f;
-}
+/* You can also add more styling below */
