@@ -56,11 +56,12 @@
   color: var(--user-panel-info);
 }
 .skin-yellow .sidebar-menu > li.header {
-  color: var(--sidebar-menu-li-header-color);
-  background: var(--sidebar-menu-li-header-bg);
+  color: var(--sidebar-menu-list-header-color);
+  background: var(--sidebar-menu-list-header-bg);
 }
 .skin-yellow .sidebar-menu > li > a {
   border-left: 3px solid transparent;
+  color: var(--sidebar-menu-list-link-color);
 }
 .skin-yellow .sidebar-menu > li:hover > a,
 .skin-yellow .sidebar-menu > li.active > a {
@@ -123,4 +124,68 @@
 
 .home-block {
     background-size: cover;
+}
+
+.colours a.who_we_are,
+.content-panel.who_we_are{
+	background-color: var(--landing-about-it-bg-color);
+
+}
+
+.colours a.guestbook,
+.content-panel.guestbook{
+	background-color: var(--landing-guestbook-bg-color);
+}
+
+.colours a.products,
+.content-panel.products{
+	background-color: var(--landing-products-bg-color);
+}
+
+.bg-purple {
+  background-color: var(--acl-users-bg-color)!important;
+}
+
+.btn-info {
+  background-color: var(--btn-info-bg-color);
+}
+
+.btn-success {
+  background-color: var(--btn-success-bg-color);
+  border-color: var(--btn-success-border-color);
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: var(--acl-users-bg-color);
+  border-color: var(--acl-users-bg-color);
+  color: var(--navbar-bg-color);
+}
+
+.skin-yellow .main-header .navbar .sidebar-toggle {
+  color: var(--navbar-link-color);
+}
+
+.widget-group-title {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-inverse :is(.navbar-collapse, .navbar-form) {
+  background-color: var(--navbar-bg-color);
+}
+
+.project_title_content {
+  color: var(--navbar-link-color);
+}
+
+:is(.ol-control, .ol-custom-overviewmap) button {
+  background-color: var(--navbar-bg-color);
+  color: var(--navbar-link-color)
+}
+
+:is(.ol-control, .ol-custom-overviewmap) button:is(:hover, :focus) {
+  background-color: var(--landing-guestbook-bg-color);
+}
+
+.skin-yellow .g3w-ol-toggled {
+
 }

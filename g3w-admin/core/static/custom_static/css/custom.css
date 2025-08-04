@@ -4,28 +4,29 @@
 change the value of the defined properties here
 */
 :root {
-  --navbar-bg-color: #f39c12;
+  --skin-color: #3E3E3E;
+  --navbar-bg-color: #3E3E3E;
   --navbar-link-color: #ffffff;
   --navbar-link-active-bg-color: rgba(0, 0, 0, 0.1);
-  --navbar-link-active-color: #f6f6f6;
+  --navbar-link-active-color: #ffffff;
   --sidebar-toggle-color: #ffffff;
   --sidebar-toggle-hover-color: #f6f6f6;
   --sidebar-toggle-hover-bg-color: #e08e0b;
   --navbar-dropdown-list-divider-bg-color: rgba(255, 255, 255, 0.1);
   --navbar-dropdown-list-link-color: #fff;
   --navbar-dropdown-list-link-hover-bg: #e08e0b;
-  --main-header-logo-bg-color: #e08e0b;
+  --main-header-logo-bg-color: #3E3E3E;
   --main-header-logo-color: #ffffff;
   --main-header-logo-hover-bg-color: #db8b0b;
   --user-header-bg-color: #f39c12;
   --content-header-bg: transparent;
   --wrapper-main-sidebar-left-side-bg-color: #222d32;
   --user-panel-info: #fff;
-  --sidebar-menu-li-header-color: #4b646f;
-  --sidebar-menu-li-header-bg: #1a2226;
+  --sidebar-menu-list-header-color: #4b646f;
+  --sidebar-menu-list-header-bg: #1a2226;
   --sidebar-menu-list-link-color: #ffffff;
   --sidebar-menu-list-link-bg: #1e282c;
-  --sidebar-menu-list-link-border-left-color: #f39c12;
+  --sidebar-menu-list-link-border-left-color: #ffffff;
   --treeview-menu-bg: #2c3b41;
   --sidebar-link-color: #b8c7ce;
   --sidebar-link-hover-text-decor: none;
@@ -38,6 +39,13 @@ change the value of the defined properties here
   --sidebar-form-input-text-focus-color: #666;
   --sidebar-form-input-text-focus-btn: #fff;
   --sidebar-form-btn: #999;
+  --landing-about-it-bg-color: #57A0C7;
+  --landing-guestbook-bg-color: #ECB44B;
+  --landing-products-bg-color: #3E3E3E;
+  --acl-users-bg-color: #555555;
+  --btn-info-bg-color: #57A0C7;
+  --btn-success-bg-color: #ECB44B;
+  --btn-success-border-color: #ECB44B;
 }
 
 /* You can also add more styling below */
