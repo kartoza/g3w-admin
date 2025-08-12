@@ -189,3 +189,40 @@
 .skin-yellow .g3w-ol-toggled {
 
 }
+
+.input[type="file"]::file-selector-button {
+  background-color: #626262;
+}
+
+.content-box h1 {
+	font-size: 30px;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: 1.2em;
+    margin-bottom: 5px;
+    /* max-width: 900px; */
+    letter-spacing: 0px;
+    margin-left: 30px;
+    color: var(--navbar-bg-color);
+}
+
+.colour[data-color="about_it"] {
+  background-color: var(--landing-about-it-bg-color);
+}
+
+.colour[data-color="guestbook"] {
+  background-color: var(--landing-guestbook-bg-color);
+}
+
+.colour[data-color="products"] {
+  background-color: var(--landing-products-bg-color);
+}
+
+.box:hover {
+  background: var(--landing-guestbook-bg-color)
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: var(--select-2-bg-color);
+  color: var(--navbar-link-color);
+}

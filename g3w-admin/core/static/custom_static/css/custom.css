@@ -20,14 +20,14 @@ change the value of the defined properties here
   --main-header-logo-hover-bg-color: #db8b0b;
   --user-header-bg-color: #f39c12;
   --content-header-bg: transparent;
-  --wrapper-main-sidebar-left-side-bg-color: #222d32;
+  --wrapper-main-sidebar-left-side-bg-color: #3F3F3F;
   --user-panel-info: #fff;
-  --sidebar-menu-list-header-color: #4b646f;
-  --sidebar-menu-list-header-bg: #1a2226;
+  --sidebar-menu-list-header-color: #ffffff;
+  --sidebar-menu-list-header-bg: #3E3E3E;
   --sidebar-menu-list-link-color: #ffffff;
-  --sidebar-menu-list-link-bg: #1e282c;
+  --sidebar-menu-list-link-bg: #57A0C7  ;
   --sidebar-menu-list-link-border-left-color: #ffffff;
-  --treeview-menu-bg: #2c3b41;
+  --treeview-menu-bg: #626262;
   --sidebar-link-color: #b8c7ce;
   --sidebar-link-hover-text-decor: none;
   --treeview-menu-list-active-link: #ffffff;
@@ -42,10 +42,11 @@ change the value of the defined properties here
   --landing-about-it-bg-color: #57A0C7;
   --landing-guestbook-bg-color: #ECB44B;
   --landing-products-bg-color: #3E3E3E;
-  --acl-users-bg-color: #555555;
+  --acl-users-bg-color: #3E3E3E;
   --btn-info-bg-color: #57A0C7;
   --btn-success-bg-color: #ECB44B;
   --btn-success-border-color: #ECB44B;
+  --select-2-bg-color: #555555;
 }
 
 /* You can also add more styling below */
