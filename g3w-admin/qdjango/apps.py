@@ -2,6 +2,7 @@ import logging
 import os
 import glob
 import importlib
+from pathlib import Path
 
 from core.utils.general import getAuthPermissionContentType
 
@@ -32,10 +33,12 @@ if settings.DEBUG:
 
 # Setup AUTH DB
 if hasattr(settings, 'QGIS_AUTH_DB_DIR_PATH') and settings.QGIS_AUTH_DB_DIR_PATH:
+    os.makedirs(settings.QGIS_AUTH_DB_DIR_PATH, exist_ok=True)
     os.environ['QGIS_AUTH_DB_DIR_PATH'] = settings.QGIS_AUTH_DB_DIR_PATH
 
 if hasattr(settings, 'QGIS_AUTH_PASSWORD_FILE') and settings.QGIS_AUTH_PASSWORD_FILE:
     auth_file = settings.QGIS_AUTH_PASSWORD_FILE
+    Path(settings.QGIS_AUTH_PASSWORD_FILE).touch()
     if not os.path.isfile(auth_file):
         if not hasattr(settings, 'QGIS_AUTH_PASSWORD'):
             raise ImproperlyConfigured(
@@ -92,6 +95,7 @@ def init_qgis():
     # Create a reference to the QgsApplication
     QGS_APPLICATION = QgsApplication([], False) # False = disable GUI
     os.environ["QGIS_AUTH_DB_DIR_PATH"] = "/shared-volume/qgis-auth"
+    # os.makedirs(os.environ["QGIS_AUTH_DB_DIR_PATH"], exist_ok=True)
 
     # Load providers
     QGS_APPLICATION.initQgis()

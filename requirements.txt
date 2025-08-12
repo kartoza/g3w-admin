@@ -42,3 +42,5 @@ weasyprint==63.0
 distro==1.7.0
 django-allauth[socialaccount]==0.63.6
 
+# django constance
+django-constance==4.3.2

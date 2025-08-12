@@ -5,6 +5,7 @@ from usersmanage.configs import *
 from core.signals import load_css_modules, load_js_modules, load_navbar_items
 from core.utils.general import get_adminlte_skin_by_user
 from base.version import get_version
+from constance import config
 
 
 def global_settings(request):
@@ -20,8 +21,7 @@ def global_settings(request):
     # add anonymous user istance
     g3wadmin_context['anonymous_user'] = get_anonymous_user()
 
-    skin = get_adminlte_skin_by_user(request.user)
-    g3wadmin_context['adminlte_skin'] = 'skin-{}'.format(skin if skin else settings.ADMINLTE_SKIN_DEFAULT)
+    g3wadmin_context['adminlte_skin'] = settings.ADMINLTE_SKIN_DEFAULT
 
     g3wadmin_context['adminlte_layout_option'] = settings.ADMINLTE_LAYOUT_OPTION
 
@@ -53,6 +53,6 @@ def global_settings(request):
 
     g3wadmin_context['VERSION'] = get_version()
 
-    g3wadmin_context['admin_page_title'] = getattr(settings, 'G3WSUITE_CUSTOM_TITLE', settings.SITE_TITLE)
+    g3wadmin_context['admin_page_title'] = config.CUSTOM_WEBSITE_TITLE
 
     return g3wadmin_context

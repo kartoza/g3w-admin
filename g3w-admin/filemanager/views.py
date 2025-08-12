@@ -5,6 +5,7 @@ from django.http.response import JsonResponse, HttpResponse
 from django.utils.decorators import method_decorator
 from usersmanage.decorators import user_passes_test_or_403
 from usersmanage.utils import userHasGroups, G3W_EDITOR1
+from constance import config
 from .filemanager import FileManager
 import json
 import os
@@ -22,7 +23,7 @@ class FilemanagerView(TemplateView):
         cdata = super(FilemanagerView, self).get_context_data(**kwargs)
 
         # add title
-        cdata['page_title'] = getattr(settings, 'G3WSUITE_CUSTOM_TITLE', 'G3W-SUITE FileManager')
+        cdata['page_title'] = config.CUSTOM_WEBSITE_TITLE
 
         return cdata
 

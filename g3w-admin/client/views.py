@@ -18,6 +18,7 @@ from core.utils.general import get_adminlte_skin_by_user
 from usersmanage.utils import get_users_for_object, get_user_model
 from usersmanage.configs import *
 from copy import deepcopy
+from constance import config
 import json
 import secrets
 
@@ -171,7 +172,7 @@ class ClientView(TemplateView):
         # page title
 
         contextData['page_title'] = '{} | {}'.format(
-            getattr(settings, 'G3WSUITE_CUSTOM_TITLE', 'g3w - client'),
+            config.CUSTOM_WEBSITE_TITLE,
             self.project.title_ur if self.project.title_ur else self.project.title
         )
 
