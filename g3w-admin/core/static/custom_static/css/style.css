@@ -59,6 +59,9 @@
   color: var(--sidebar-menu-list-header-color);
   background: var(--sidebar-menu-list-header-bg);
 }
+.skin-yellow .sidebar-menu .treeview {
+  background: var(--sidebar-treeview-bg-color);
+}
 .skin-yellow .sidebar-menu > li > a {
   border-left: 3px solid transparent;
   color: var(--sidebar-menu-list-link-color);
@@ -218,10 +221,6 @@
   background-color: var(--landing-products-bg-color);
 }
 
-.box:hover {
-  background: var(--landing-guestbook-bg-color)
-}
-
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
   background-color: var(--select-2-bg-color);
   color: var(--navbar-link-color);
@@ -229,4 +228,9 @@
 
 .control-sidebar-dark, .control-sidebar-dark + .control-sidebar-bg {
   background: var(--wrapper-main-sidebar-left-side-bg-color);
+}
+
+.group-grid-cell .box:hover,
+.macrogroup-grid-cell .box:hover {
+  background: var(--landing-guestbook-bg-color);
 }
