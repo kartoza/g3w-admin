@@ -226,3 +226,7 @@
   background-color: var(--select-2-bg-color);
   color: var(--navbar-link-color);
 }
+
+.control-sidebar-dark, .control-sidebar-dark + .control-sidebar-bg {
+  background: var(--wrapper-main-sidebar-left-side-bg-color);
+}
