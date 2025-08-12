@@ -48,6 +48,7 @@ change the value of the defined properties here
   --btn-success-bg-color: #ECB44B;
   --btn-success-border-color: #ECB44B;
   --select-2-bg-color: #555555;
+  --layer-legent-bg-color: rgba(0, 0, 0, 0);
 }
 
 /* You can also add more styling below */

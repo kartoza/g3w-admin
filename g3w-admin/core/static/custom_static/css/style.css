@@ -234,3 +234,7 @@
 .macrogroup-grid-cell .box:hover {
   background: var(--landing-guestbook-bg-color);
 }
+
+.catalog .layer-legend {
+  background-color: var(--layer-legent-bg-color)!important;
+}
