@@ -6,6 +6,7 @@ from django.core.files.storage import default_storage, FileSystemStorage
 from django.core.files.base import ContentFile
 from core.utils.response import send_file
 from qdjango.utils.storage import OverwriteStorage
+from qdjango.apps import init_qgis
 from .filemanagerresponse import FileManagerResponse
 import os
 import shutil
@@ -125,6 +126,7 @@ class FileManager:
                newstr=newstr+uc
 
         return newstr
+
     def seekfolder(self):
         ''' Provides list of file and folder objects contained in a given directory. '''
         folder          = self.request.GET.get('path').lstrip("/")
@@ -191,6 +193,10 @@ class FileManager:
 
                    response  = FileManagerResponse(file_path, self.root)
                    response.set_response(multi=True)
+
+                   #  If file is uploaded to QGIS_AUTH_DB_DIR_PATH, reload QGIS
+                   if os.path.dirname(file_path) == settings.QGIS_AUTH_DB_DIR_PATH:
+                       init_qgis()
                    return JsonResponse(response.response)
                 else:
                    return self.fileManagerError(path=filename)
