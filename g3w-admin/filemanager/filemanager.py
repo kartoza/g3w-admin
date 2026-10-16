@@ -3,7 +3,6 @@
 from django.conf import settings
 from django.http.response import JsonResponse
 from django.core.files.storage import default_storage, FileSystemStorage
-from django.core.files.base import ContentFile
 from core.utils.response import send_file
 from qdjango.utils.storage import OverwriteStorage
 from qdjango.apps import init_qgis
@@ -189,7 +188,9 @@ class FileManager:
                 file_path = os.path.join(self.root, path, filename)
                 if (self.is_safe_path(file_path)):
 
-                   self.storage.save(file_path, ContentFile(file.read()))
+                   # Pass the UploadedFile directly so large uploads are moved/streamed
+                   # from Django's temp file instead of being read into memory
+                   self.storage.save(file_path, file)
 
                    response  = FileManagerResponse(file_path, self.root)
                    response.set_response(multi=True)
