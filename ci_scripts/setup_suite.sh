@@ -104,5 +104,8 @@ else
     python3 manage.py sitetree_resync_apps
 fi
 
+# Kartoza Credits on new instances and ones still without Credits
+python3 "${DJANGO_DIRECTORY}/manage.py" set_default_credits
+
 # Make sure data are readable:
 chmod -R 777 ${DATASOURCE_PATH}
